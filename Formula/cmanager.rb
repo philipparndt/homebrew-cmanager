@@ -5,20 +5,20 @@
 class Cmanager < Formula
   desc "Find, jump to, and get notified about Claude Code sessions in tmux"
   homepage "https://github.com/philipparndt/cmanager"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/philipparndt/cmanager/releases/download/v0.1.0/cmanager_darwin_x86_64.tar.gz"
-      sha256 "f860ded74d7ed88ffaca6cf11725e8ed5e33cddeba302bbf9b62924e083fb5c2"
+      url "https://github.com/philipparndt/cmanager/releases/download/v0.2.0/cmanager_darwin_x86_64.tar.gz"
+      sha256 "c002a5c710b97a5a28778fc727be5badf16f09942e9c1351419cbbc1708ec88d"
 
       define_method(:install) do
         bin.install "cmanager"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/philipparndt/cmanager/releases/download/v0.1.0/cmanager_darwin_arm64.tar.gz"
-      sha256 "47f697c5a359d5c4e0d63d27df54d7f36a2bd8fa2af316ece235a758aca233f8"
+      url "https://github.com/philipparndt/cmanager/releases/download/v0.2.0/cmanager_darwin_arm64.tar.gz"
+      sha256 "5b321a9833c5336d0bd6e2fc2e72e9b336079ed94a362938c6e5b677c1f59719"
 
       define_method(:install) do
         bin.install "cmanager"
@@ -28,15 +28,15 @@ class Cmanager < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/philipparndt/cmanager/releases/download/v0.1.0/cmanager_linux_x86_64.tar.gz"
-      sha256 "9f8e08eb527ecf1d1966678cbb300a4fca1ba652f7f5c8860fccf658870bf9d2"
+      url "https://github.com/philipparndt/cmanager/releases/download/v0.2.0/cmanager_linux_x86_64.tar.gz"
+      sha256 "a50cc7b257a3d1f44e7f755b1616b00421f3a3b83232e028f533aa9a0fef6449"
       define_method(:install) do
         bin.install "cmanager"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/philipparndt/cmanager/releases/download/v0.1.0/cmanager_linux_arm64.tar.gz"
-      sha256 "0e6311678daa56760bf0b8d79f34c5461112701683c7cef55d1214eb613e9f2e"
+      url "https://github.com/philipparndt/cmanager/releases/download/v0.2.0/cmanager_linux_arm64.tar.gz"
+      sha256 "6b5d4763b431c97ac7a8cbc375d3b7b6ff2d6a9ac37307bbf8cac01d1b961752"
       define_method(:install) do
         bin.install "cmanager"
       end
